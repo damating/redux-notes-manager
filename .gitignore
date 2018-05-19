@@ -17,6 +17,7 @@ bundle/
 
 # Ignore application configuration
 /config/secrets.yml
+sftp-config.json
 
 # Ignore javascript libraries files
 /public/webpack

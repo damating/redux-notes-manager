@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "react_on_rails", "11.0.0"
-gem 'webpacker', github: 'rails/webpacker'
+gem "webpacker", "~> 3.0"
 gem 'fast_jsonapi'
 gem 'mini_racer'
 
