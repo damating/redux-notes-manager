@@ -4,12 +4,13 @@ const API_URL = '/notes';
 
 var instance = axios.create({
   baseURL: '/notes',
-  headers: {'X-CSRF-Token': document.querySelector(('meta[name="csrf-token"]')).content}
+  headers: {
+    'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content,
+  },
 });
 
-
 export function deleteNote(note) {
-  return instance.delete(`/${note.id}`)
+  return instance.delete(`/${note.id}`);
 }
 
 export function createNote(note) {

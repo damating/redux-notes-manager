@@ -15,28 +15,37 @@ export function createNoteSuccess(note) {
 
 export function saveNote(note) {
   return function(dispatch, getState) {
-    if(note.id) {
-      return noteApi.updateNote(note).then(response => {
-        dispatch(updateNoteSuccess(response.data))
-      }).catch(error => {
-        throw(error);
-      });
+    if (note.id) {
+      return noteApi
+        .updateNote(note)
+        .then(response => {
+          dispatch(updateNoteSuccess(response.data));
+        })
+        .catch(error => {
+          throw error;
+        });
     } else {
-      return noteApi.createNote(note).then(response => {
-        dispatch(createNoteSuccess(response.data))
-      }).catch(error => {
-        throw(error);
-      });
+      return noteApi
+        .createNote(note)
+        .then(response => {
+          dispatch(createNoteSuccess(response.data));
+        })
+        .catch(error => {
+          throw error;
+        });
     }
   };
 }
 
 export function deleteNote(note) {
   return function(dispatch, getState) {
-    return noteApi.deleteNote(note).then(response => {
-      dispatch(deleteNoteSuccess(note));
-    }).catch(error => {
-      throw(error);
-    });
+    return noteApi
+      .deleteNote(note)
+      .then(response => {
+        dispatch(deleteNoteSuccess(note));
+      })
+      .catch(error => {
+        throw error;
+      });
   };
 }

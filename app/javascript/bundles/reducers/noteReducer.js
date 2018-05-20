@@ -1,7 +1,7 @@
 import * as types from '../actions/actionTypes';
 
 export default function(state = [], action) {
-  switch(action.type) {
+  switch (action.type) {
     case types.CREATE_NOTE_SUCCESS:
       return [...state, action.note];
 
