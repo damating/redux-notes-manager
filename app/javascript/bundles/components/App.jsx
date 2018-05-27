@@ -7,7 +7,7 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        React start
+        {this.props.children}
       </div>
     );
   }
