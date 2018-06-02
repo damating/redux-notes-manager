@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_many :notes
 
-  validates :email, uniqueness: true
+  has_secure_password
+
+  validates :email, uniqueness: true, presence: true
 end
